@@ -1,7 +1,6 @@
 def calcul (a, b, c):
     if c == 0 and b == '/':
         return "Zero division error"
-    #sigh = {'+': a+c, '-': a-c, '*':a*c, '/':a/c}
     return eval(a+b+c)
 print('Insert first number and press enter:')
 fn = input()
