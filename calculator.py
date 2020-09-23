@@ -1,4 +1,4 @@
-def calcul (a, b, c):
+def calcul(a, b, c):
     if c == 0 and b == '/':
         return "Zero division error"
     return eval(a+b+c)
