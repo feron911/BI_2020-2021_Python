@@ -1,12 +1,11 @@
 class Dna(object):
-
-    '''This class for dna'''
+    """This class for dna"""
 
     def __init__(self, sequence, name="dna"):
         if not isinstance(sequence, str):
-            raise TypeError ("Object of the class \"Dna\" must be a string")
+            raise TypeError("Object of the class \"Dna\" must be a string")
         if len(sequence) == 0:
-            raise TypeError ("Object of the class \"Dna\" must have length more than 1")
+            raise TypeError("Object of the class \"Dna\" must have length more than 1")
         for i in sequence:
             dna_letters = ("A", "a", "G", "g", "C", "c", "T", "t")
             if i not in dna_letters:
@@ -17,7 +16,7 @@ class Dna(object):
     def reverse_complement(self):
         rc = ''
         for i in self.sequence:
-            rev_comp = {"A": "T", "a": "t", "G": "C", "g": "c", "T": "A", "t":"a", "C":"G", "c":"g"}
+            rev_comp = {"A": "T", "a": "t", "G": "C", "g": "c", "T": "A", "t": "a", "C": "G", "c": "g"}
             rc += rev_comp[i]
         return Dna(rc)
 
@@ -43,9 +42,9 @@ class Dna(object):
     def __eq__(self, other):
         return self.sequence == other.sequence
 
-class Rna(object):
 
-    '''This class for Rna'''
+class Rna(object):
+    """This class for Rna"""
 
     def __init__(self, sequence, name="rna"):
         if not isinstance(sequence, str):
@@ -53,7 +52,7 @@ class Rna(object):
         if len(sequence) == 0:
             raise TypeError("Object of the class \"Rna\" must have length more than 1")
         for i in sequence:
-            rna_letters =  ("A", "a", "G", "g", "C", "c", "U", "u")
+            rna_letters = ("A", "a", "G", "g", "C", "c", "U", "u")
             if i not in rna_letters:
                 raise TypeError(f"Object of the class \"Rna\" cannot include \"{i}\" symbol")
         self.sequence = sequence
