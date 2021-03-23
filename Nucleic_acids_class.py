@@ -75,9 +75,3 @@ class Rna(object):
 
     def __eq__(self, other):
         return self.sequence == other.sequence
-
-a = (Dna("GGG"), Rna("UUU"))
-
-
-for i in a:
-    print(i)
